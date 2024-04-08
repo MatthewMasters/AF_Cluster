@@ -53,7 +53,8 @@ if __name__=='__main__':
     p.add_argument('--min_eps', action='store',default=3, help='Min epsilon value to scan for DBSCAN (Default 3).')
     p.add_argument('--max_eps', action='store',default=20, help='Max epsilon value to scan for DBSCAN (Default 20).')
     p.add_argument('--eps_step', action='store',default=.5, help='step for epsilon scan for DBSCAN (Default 0.5).')
-    p.add_argument('--min_samples', action='store',default=3, help='Default min_samples for DBSCAN (Default 3, recommended no lower than that).')
+    p.add_argument('--min_samples', action='store',default=3, type=int,
+                   help='Default min_samples for DBSCAN (Default 3, recommended no lower than that).')
 
     p.add_argument('--run_PCA', action='store_true', help='Run PCA on one-hot embedding of sequences and store in output_cluster_metadata.tsv')
     p.add_argument('--run_TSNE', action='store_true', help='Run TSNE on one-hot embedding of sequences and store in output_cluster_metadata.tsv')
